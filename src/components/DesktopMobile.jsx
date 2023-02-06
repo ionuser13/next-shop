@@ -1,9 +1,9 @@
 import React from 'react';
-import "@styles/desktopMobile.scss";
+import styles from "@styles/desktopMobile.module.scss";
 
 const DesktopMobile = () => {
     return (
-      <div className="mobile-menu">
+      <div className={styles.mobileMenu}>
         <ul>
           <li>
             <a href="/">CATEGORIES</a>
