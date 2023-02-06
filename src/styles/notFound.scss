@@ -1,0 +1,33 @@
+@import "vars";
+.NotFound {
+    position: relative;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+.notfound-logo {
+    height: 10%;
+}
+.lower-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+.lost {
+    font-size: 50px;
+}
+.description-container {
+    text-align: center;
+}
+.back {
+    width: 200px;
+    margin: 0 auto;
+}
+.home-link {
+    text-decoration: none;
+    color: var(--white)
+}
