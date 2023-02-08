@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import Image from 'next/image';
 import Menu from "@components/DesktopMenu";
 import DesktopMobile from "@components/DesktopMobile";
 import MyOrder from '@containers/MyOrder';
@@ -29,10 +30,10 @@ const Header = () => {
 
     return (
       <nav className={styles.nav}>
-        <img src={menuIcon} alt="menu" className={styles.menu} onClick={handleMobtog} />
+        <Image src={menuIcon} alt="menu" className={styles.menu} onClick={handleMobtog} />
         {mobtog && <DesktopMobile />}
         <div className={styles["navbar-left"]}>
-          <img src={logo} alt="logo" className={styles["nav-logo"]}/>
+          <Image src={logo} alt="logo" className={styles["nav-logo"]}/>
           <ul className={styles["navbar-left-ul"]}>
             <li>
               <a href="/" className={styles["navbar-left-ul-li-a"]}>All</a>
@@ -60,7 +61,7 @@ const Header = () => {
               platzi@example.com
             </li>
             <li className={styles["navbar-shopping-cart"]} onClick={handleToggleOrder}>
-              <img src={shoppingCart} alt="shopping cart" />
+              <Image src={shoppingCart} alt="shopping cart" />
               <div className={styles["navbar-shopping-cart-div"]}>{state.cart.length}</div>
             </li>
           </ul>

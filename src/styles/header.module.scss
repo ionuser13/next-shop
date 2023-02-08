@@ -14,6 +14,7 @@
   }
   .nav-logo {
     width: 100px;
+    margin: auto 0;
   }
   .navbar-left-ul,
   .navbar-right-ul {
@@ -30,8 +31,7 @@
   .navbar-left-ul {
     margin-left: 12px;
   }
-  .navbar-left-ul-li-a,
-  .navbar-right ul li a {
+  .navbar-left-ul-li-a {
     text-decoration: none;
     color: $--very-light-pink;
     border: 1px solid $--white;

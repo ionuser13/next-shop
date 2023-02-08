@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductItem from '@components/ProductItem';
-import "@styles/productList.scss";
 import useGetProducts from '@hooks/useGetProducts';
+import styles from "@styles/productList.module.scss";
 
 
 const API = "https://api.escuelajs.co/api/v1/products";
@@ -10,7 +10,7 @@ const ProductList = () => {
     const products = useGetProducts(API)
     return (
         <section className="main-container">
-            <div className="ProductList">
+            <div className={styles["ProductList"]}>
                 {products.map(product => (
                     <ProductItem product={product} key={product.id} />
                 ))}

@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import Image from "next/image";
 import OrderItem from "@components/OrderItem";
 import AppContext from "@context/AppContext";
 import flecha from "@icons/flechita.svg";
@@ -16,7 +17,7 @@ const MyOrder = ({setToggleOrder}) => {
   return (
     <div className={styles.MyOrder}>
       <div className={styles["title-container"]}>
-        <img src={flecha} alt="arrow" onClick={handleClose} className={`${styles["title-container-img"]}`} />
+        <Image src={flecha} alt="arrow" onClick={handleClose} className={`${styles["title-container-img"]}`} />
         <p className="title">My order</p>
       </div>
       <div className={styles["my-order-content"]}>    
