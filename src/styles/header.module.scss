@@ -15,8 +15,8 @@
   .nav-logo {
     width: 100px;
   }
-  .navbar-left ul,
-  .navbar-right ul {
+  .navbar-left-ul,
+  .navbar-right-ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -27,10 +27,10 @@
   .navbar-left {
     display: flex;
   }
-  .navbar-left ul {
+  .navbar-left-ul {
     margin-left: 12px;
   }
-  .navbar-left ul li a,
+  .navbar-left-ul-li-a,
   .navbar-right ul li a {
     text-decoration: none;
     color: $--very-light-pink;
@@ -38,8 +38,7 @@
     padding: 8px;
     border-radius: 8px;
   }
-  .navbar-left ul li a:hover,
-  .navbar-right ul li a:hover {
+  .navbar-left-ul-li-a:hover {
     border: 1px solid $--hospital-green;
     color: $--hospital-green;
   }
@@ -53,7 +52,7 @@
     position: relative;
     cursor: pointer;
   }
-  .navbar-shopping-cart div {
+  .navbar-shopping-cart-div {
     width: 16px;
     height: 16px;
     background-color: $--hospital-green;
@@ -72,7 +71,7 @@
       display: block;
       cursor: pointer;
     }
-    .navbar-left ul {
+    .navbar-left-ul {
       display: none;
     }
     .navbar-email {

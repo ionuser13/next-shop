@@ -11,12 +11,12 @@ const MyOrderSidePanel = ({product, indexValue}) => {
   }
     return (
       <div className={styles.OrderItem}>
-        <figure>
-          <img src={product.images[0]} alt={product.title} />
+        <figure className={styles["Order-Item-figure"]}>
+          <img src={product.images[0]} alt={product.title} className={styles["Order-Item-figure-img"]} />
         </figure>
-        <p>{product.title}</p>
-        <p>{product.price}</p>
-        <img src={close} alt="close" onClick={() => handleRemove(indexValue)} />
+        <p className={styles["OrderItem-p-2"]}>{product.title}</p>
+        <p className={styles["OrderItem-p-3"]}>{product.price}</p>
+        <img src={close} alt="close" onClick={() => handleRemove(indexValue)} className={styles["OrderItem-img"]} />
       </div>
     );
 }

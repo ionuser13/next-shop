@@ -29,39 +29,39 @@ const Header = () => {
 
     return (
       <nav className={styles.nav}>
-        <img src={menuIcon} alt="menu" className="menu" onClick={handleMobtog} />
+        <img src={menuIcon} alt="menu" className={styles.menu} onClick={handleMobtog} />
         {mobtog && <DesktopMobile />}
-        <div className="navbar-left">
-          <img src={logo} alt="logo" className="nav-logo" />
-          <ul>
+        <div className={styles["navbar-left"]}>
+          <img src={logo} alt="logo" className={styles["nav-logo"]}/>
+          <ul className={styles["navbar-left-ul"]}>
             <li>
-              <a href="/">All</a>
+              <a href="/" className={styles["navbar-left-ul-li-a"]}>All</a>
             </li>
             <li>
-              <a href="/">Clothes</a>
+              <a href="/" className={styles["navbar-left-ul-li-a"]}>Clothes</a>
             </li>
             <li>
-              <a href="/">Electronics</a>
+              <a href="/" className={styles["navbar-left-ul-li-a"]}>Electronics</a>
             </li>
             <li>
-              <a href="/">Furnitures</a>
+              <a href="/" className={styles["navbar-left-ul-li-a"]}>Furnitures</a>
             </li>
             <li>
-              <a href="/">Toys</a>
+              <a href="/" className={styles["navbar-left-ul-li-a"]}>Toys</a>
             </li>
             <li>
-              <a href="/">Others</a>
+              <a href="/" className={styles["navbar-left-ul-li-a"]}>Others</a>
             </li>
           </ul>
         </div>
-        <div className="navbar-right">
-          <ul>
-            <li className="navbar-email" onClick={handleToggle}>
+        <div className={styles["navbar-right"]}>
+          <ul className={styles["navbar-right-ul"]}>
+            <li className={styles["navbar-email"]} onClick={handleToggle}>
               platzi@example.com
             </li>
-            <li className="navbar-shopping-cart" onClick={handleToggleOrder}>
+            <li className={styles["navbar-shopping-cart"]} onClick={handleToggleOrder}>
               <img src={shoppingCart} alt="shopping cart" />
-              <div>{state.cart.length}</div>
+              <div className={styles["navbar-shopping-cart-div"]}>{state.cart.length}</div>
             </li>
           </ul>
         </div>

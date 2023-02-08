@@ -15,22 +15,22 @@ const MyOrder = ({setToggleOrder}) => {
   const handleClose = () => setToggleOrder(false)
   return (
     <div className={styles.MyOrder}>
-      <div className="title-container">
-        <img src={flecha} alt="arrow" onClick={handleClose}/>
+      <div className={styles["title-container"]}>
+        <img src={flecha} alt="arrow" onClick={handleClose} className={`${styles["title-container-img"]}`} />
         <p className="title">My order</p>
       </div>
-      <div className="my-order-content">    
+      <div className={styles["my-order-content"]}>    
         {state.cart.map((item, index) => {
           return <OrderItem indexValue={index} product={item} key={`orderItem-${item.id}`} />;
         })}
       </div>
-      <div className="order">
-        <p>
-          <span>Total</span>
+      <div className={styles.order}>
+        <p className={styles["order-p-1"]}>
+          <span className={styles["order-p-span-1"]}>Total</span>
         </p>
-        <p>${sumPrices()}</p>
+        <p className={styles["order-p-2"]}>${sumPrices()}</p>
       </div>
-      <button className="primary-button">Checkout</button>
+      <button className={styles["primary-button"]}>Checkout</button>
     </div>
   );
 };

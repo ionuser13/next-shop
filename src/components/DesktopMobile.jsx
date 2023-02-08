@@ -4,47 +4,47 @@ import styles from "@styles/desktopMobile.module.scss";
 const DesktopMobile = () => {
     return (
       <div className={styles.mobileMenu}>
-        <ul>
-          <li>
-            <a href="/">CATEGORIES</a>
+        <ul className={`${styles["mobileMenu-ul"]} ${styles["mobileMenu-ul-1"]}`}>
+          <li className={`${styles["mobileMenu-ul-li"]}`}>
+            <a href="/" className={`${styles["mobileMenu-ul-li-a"]}`}>CATEGORIES</a>
           </li>
-          <li>
-            <a href="/">All</a>
+          <li className={`${styles["mobileMenu-ul-li"]}`}>
+            <a href="/" className={`${styles["mobileMenu-ul-li-a"]}`}>All</a>
           </li>
-          <li>
-            <a href="/">Clothes</a>
+          <li className={`${styles["mobileMenu-ul-li"]}`}>
+            <a href="/" className={`${styles["mobileMenu-ul-li-a"]}`}>Clothes</a>
           </li>
-          <li>
-            <a href="/">Electronics</a>
+          <li className={`${styles["mobileMenu-ul-li"]}`}>
+            <a href="/" className={`${styles["mobileMenu-ul-li-a"]}`}>Electronics</a>
           </li>
-          <li>
-            <a href="/">Furnitures</a>
+          <li className={`${styles["mobileMenu-ul-li"]}`}>
+            <a href="/" className={`${styles["mobileMenu-ul-li-a"]}`}>Furnitures</a>
           </li>
-          <li>
-            <a href="/">Toys</a>
+          <li className={`${styles["mobileMenu-ul-li"]}`}>
+            <a href="/" className={`${styles["mobileMenu-ul-li-a"]}`}>Toys</a>
           </li>
-          <li>
-            <a href="/">Other</a>
-          </li>
-        </ul>
-
-        <ul>
-          <li>
-            <a href="/">My orders</a>
-          </li>
-          <li>
-            <a href="/">My account</a>
+          <li className={`${styles["mobileMenu-ul-li"]}`}>
+            <a href="/" className={`${styles["mobileMenu-ul-li-a"]}`}>Other</a>
           </li>
         </ul>
 
-        <ul>
-          <li>
-            <a href="/" className="email">
+        <ul className={`${styles["mobileMenu-ul"]}`}>
+          <li className={`${styles["mobileMenu-ul-li"]}`}>
+            <a href="/" className={`${styles["mobileMenu-ul-li-a"]}`}>My orders</a>
+          </li>
+          <li className={`${styles["mobileMenu-ul-li"]}`}>
+            <a href="/" className={`${styles["mobileMenu-ul-li-a"]}`}>My account</a>
+          </li>
+        </ul>
+
+        <ul className={`${styles["mobileMenu-ul"]}`}>
+          <li className={`${styles["mobileMenu-ul-li"]}`}>
+            <a href="/" className={styles.email}>
               platzi@example.com
             </a>
           </li>
-          <li>
-            <a href="/" className="sign-out">
+          <li className={`${styles["mobileMenu-ul-li"]}`}>
+            <a href="/" className={styles["sign-out"]}>
               Sign out
             </a>
           </li>
