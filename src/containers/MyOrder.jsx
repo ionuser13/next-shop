@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import OrderItem from "@components/OrderItem";
 import AppContext from "@context/AppContext";
@@ -31,7 +32,7 @@ const MyOrder = ({setToggleOrder}) => {
         </p>
         <p className={styles["order-p-2"]}>${sumPrices()}</p>
       </div>
-      <button className={styles["primary-button"]}>Checkout</button>
+      <Link href="/checkout" className={styles["primary-button"]}>Checkout</Link>
     </div>
   );
 };
