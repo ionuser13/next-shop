@@ -8,22 +8,22 @@
   margin-bottom: 12px;
 }
 
-.Order p:nth-child(1) {
+.Order-p-1 {
   display: flex;
   flex-direction: column;
 }
 
-.Order p span:nth-child(1) {
-  font-size: var(--md);
+.Order-p-span-1 {
+  font-size: $--md;
   font-weight: bold;
 }
 
-.Order p span:nth-child(2) {
-  font-size: var(--sm);
-  color: var(--very-light-pink);
+.Order-p-span-2 {
+  font-size: $--sm;
+  color: $--very-light-pink;
 }
 
-.Order p:nth-child(2) {
+.Order-p-2 {
   text-align: end;
   font-weight: bold;
 }
