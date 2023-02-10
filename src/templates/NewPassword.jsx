@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from "@logos/logo_yard_sale.svg";
-import "@styles/newPassword.scss";
-import "@styles/login.scss";
+import logo from '@logos/logo_yard_sale.svg';
+import Image from 'next/image';
+import styles from '@styles/newPassword.module.scss';
 
 const NewPassword = () => {
-    return (
-        <div className="NewPassword">
-            <div className="NewPassword-container">
-                <img src={logo} alt="logo" className="logo" />
-                <h1 className="title">Create a new password</h1>
-                <p className="subtitle">Enter a new passwrd for your account</p>
-                <form action="/" className="form">
-                    <label for="password" className="label">Password</label>
-                    <input type="password" id="password" placeholder="*********" className="input input-password" />
-                    <label for="new-password" className="label">Password</label>
-                    <input type="password" id="new-password" placeholder="*********" className="input input-password" />
-                    <input type="submit" value="Confirm" className="primary-button login-button" />
-                </form>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className={styles["NewPassword"]}>
+      <div className={styles["NewPassword-container"]}>
+        <Image src={logo} alt="logo" className={styles["logo"]} />
+        <h1 className={styles["title"]}>Create a new password</h1>
+        <p className={styles["subtitle"]}>Enter a new passwrd for your account</p>
+        <form action="/" className={styles["form"]}>
+          <label for="password" className={styles["label"]}>
+            Password
+          </label>
+          <input type="password" id="password" placeholder="*********" className={`${styles["input"]} ${styles["input-password"]}`} />
+          <label for="new-password" className={styles["label"]}>
+            Password
+          </label>
+          <input type="password" id="new-password" placeholder="*********" className={`${style["input"]} ${styles["input-password"]}`} />
+          <input type="submit" value="Confirm" className={`${styles["primary-button"]} ${styles["login-button"]}`} />
+        </form>
+      </div>
+    </div>
+  );
+};
 
-export default NewPassword
+export default NewPassword;

@@ -1,12 +1,13 @@
 import React from 'react';
-import OrderItem from "@components/OrderItem"; import "@styles/Orders.scss";
+import OrderItem from "@components/OrderItem"; 
+import styles from "@styles/Orders.module.scss";
 
 const Orders = () => {
     return (
-        <div className="Orders">
-            <div className="Orders-container">
-                <h1 className="title">My Orders</h1>
-                <div className="Orders-content">
+        <div className={styles["Orders"]}>
+            <div className={styles["Orders-container"]}>
+                <h1 className={styles["title"]}>My Orders</h1>
+                <div className={styles["Orders-content"]}>
                     <OrderItem />
                 </div>
             </div>

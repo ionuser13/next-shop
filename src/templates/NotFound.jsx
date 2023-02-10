@@ -1,19 +1,20 @@
 import React from 'react';
 import logo from "@logos/logo_yard_sale.svg";
-import "@styles/notFound.scss"
+import Image from 'next/image';
+import styles from "@styles/notFound.module.scss"
 
 const NotFound = () => {
     return (
-        <div className='NotFound'>
-            <img src={logo} alt="main logo" className='notfound-logo' />
-            <div className='lower-container'>
-                <h1 className='lost'>Oh no... We lost this page</h1>
-                <div className='description-container'>
+        <div className={styles["NotFound"]}>
+            <Image src={logo} alt="main logo" className={styles["notfound-logo"]} />
+            <div className={styles["lower-container"]}>
+                <h1 className={styles["lost"]}>Oh no... We lost this page</h1>
+                <div className={styles["description-container"]}>
                     <p>We searched everywhere but couldn't find what you are looking for.</p>
                     <p>Let's find a better place for you to go.</p>
                 </div>
-                <div className='back'>
-                    <button className='primary-button'><a href="/" className='home-link'>Home</a></button>   
+                <div className={"back"}>
+                    <button className={styles["primary-button"]}><a href="/" className={styles["home-link"]}>Home</a></button>   
                 </div>
             </div>
         </div>
