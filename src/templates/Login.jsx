@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import logo from "@logos/logo_yard_sale.svg";
-import "@styles/login.scss";
+import Image from 'next/image';
+import styles from "@styles/login.scss";
 
 const Login = () => {
   const form = useRef(null);
@@ -15,12 +16,12 @@ const Login = () => {
   }
 
     return (
-      <div className="Login">
-        <div className="Login-container">
-          <img src={logo} alt="logo" className="logo" />
+      <div className={styles["Login"]}>
+        <div className={styles["Login-container"]}>
+          <Image src={logo} alt="logo" className={styles["logo"]} />
 
-          <form action="/" className="form" ref={form}>
-            <label htmlFor="email" className="label">
+          <form action="/" className={styles["form"]} ref={form}>
+            <label htmlFor="email" className={styles["label"]}>
               Email address
             </label>
             <input
@@ -28,10 +29,10 @@ const Login = () => {
               id="email"
               name="email"
               placeholder="platzi@example.com"
-              className="input input-email"
+              className={`${styles["input"]} ${styles["input-email"]}`}
             />
 
-            <label htmlFor="password" className="label">
+            <label htmlFor="password" className={styles["label"]}>
               Password
             </label>
             <input
@@ -39,19 +40,19 @@ const Login = () => {
               id="password"
               name="password"
               placeholder="*********"
-              className="input input-password"
+              className={`${styles["input"]} ${styles["input-password"]}`}
             />
 
             <button
-              className="primary-button login-button"
+              className={`${styles["primary-button"]} ${styles["login-button"]}`}
               onClick={handleSubmit}
             >
               Log In
             </button>
-            <a href="/">Forgot my password</a>
+            <a href="/" className={styles["form-a"]}>Forgot my password</a>
           </form>
 
-          <button className="secondary-button signup-button">Sign In</button>
+          <button className={`${styles["secondary-button"]} ${styles["signup-button"]}`}>Sign In</button>
         </div>
       </div>
     );

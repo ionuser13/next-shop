@@ -1,6 +1,5 @@
 import React from 'react';
-import "@styles/myAccountMobile.scss";
-import "@styles/login.scss";
+import styles from "@styles/myAccountMobile.module.scss";
 
 const MyAccountMobile = () => {
     return (

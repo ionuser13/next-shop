@@ -1,13 +1,14 @@
 import React from 'react';
 import ProductInfo from "@components/ProductInfo";
 import close from "@icons/icon_close.png";
-import "@styles/ProductDetail.scss";
+import Image from 'next/image';
+import styles from "@styles/ProductDetail.scss";
 
 const ProductDetail = () => {
     return (
-        <div className="ProductDetail">
-            <div className="product-detail-close">
-                <img src={close} alt="close" />
+        <div className={styles["ProductDetail"]}>
+            <div className={styles["product-detail-close"]}>
+                <Image src={close} alt="close" className={styles["ProductDetail-img"]} />
             </div>
             <ProductInfo />
         </div>
