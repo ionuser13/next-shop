@@ -14,7 +14,13 @@ const MyOrder = ({setToggleOrder}) => {
     const sum = state.cart.reduce(reducer, 0);
     return sum;
   };
-  const handleClose = () => setToggleOrder(false)
+  const handleClose = () => setToggleOrder(false);
+
+  // const [imgSrc, setImgSrc] = useState("");
+  // const handleChange = () => {
+  //   setImgSrc(state.cart[0])
+  // }
+
   return (
     <div className={styles.MyOrder}>
       <div className={styles["title-container"]}>

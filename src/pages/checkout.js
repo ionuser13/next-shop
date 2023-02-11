@@ -1,8 +1,18 @@
-import React from 'react';
-import OrderItem from "@components/OrderItem";
+import React, { useContext } from 'react';
+import MyOrderSidePanel from "@components/OrderItem";
+import AppContext from '@context/AppContext';
 import styles from "@styles/Checkout.module.scss";
 
 const Checkout = () => {
+    const {state} = useContext(AppContext);
+    const currentDate = new Date();
+    const date = `${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()}`;
+
+    const sumTotal = () => {
+        const reducer = (accumulator, currentValue) => accumulator + currentValue.price;
+        const sum = state.cart.reduce(reducer, 0);
+        return sum
+    }
     return (
         <div className={styles["checkout"]}>
             <div className={styles["checkout-container"]}>
@@ -10,13 +20,13 @@ const Checkout = () => {
                 <div className={styles["checkout-content"]}>
                     <div className={styles["order"]}>
                         <p className={styles["order-p-1"]}>
-                            <span className={styles["order-p-span-1"]}>03.25.21</span>
-                            <span className={styles["order-p-span-2"]}>6 articles</span>
+                            <span className={styles["order-p-span-1"]}>{date}</span>
+                            <span className={styles["order-p-span-2"]}>{state.cart.length} articles</span>
                         </p>
-                        <p className={styles["order-p-2"]}>$560.00</p>
+                        <p className={styles["order-p-2"]}>$ {sumTotal()}</p>
                     </div>
                 </div>
-                <OrderItem />
+                <MyOrderSidePanel product={state.cart.item}/>
             </div>
         </div>
     )

@@ -59,6 +59,9 @@
     background-color: $--hospital-green;
     border-radius: 8px;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: $--white;
     width: 100%;
     cursor: pointer;

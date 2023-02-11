@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import Menu from "@components/DesktopMenu";
 import DesktopMobile from "@components/DesktopMobile";
@@ -33,7 +34,9 @@ const Header = () => {
         <Image src={menuIcon} alt="menu" className={styles.menu} onClick={handleMobtog} />
         {mobtog && <DesktopMobile />}
         <div className={styles["navbar-left"]}>
-          <Image src={logo} alt="logo" className={styles["nav-logo"]}/>
+          <Link href="/" style={{"display": "flex"}}>
+            <Image src={logo} alt="logo" className={styles["nav-logo"]}/>
+          </Link>
           <ul className={styles["navbar-left-ul"]}>
             <li>
               <a href="/" className={styles["navbar-left-ul-li-a"]}>All</a>

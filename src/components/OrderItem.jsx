@@ -12,8 +12,8 @@ const MyOrderSidePanel = ({product, indexValue}) => {
   }
     return (
       <div className={styles.OrderItem}>
-        <figure className={styles["Order-Item-figure"]}>
-          <Image src={product?.images[0]} alt={product?.title} className={styles["Order-Item-figure-img"]} />
+        <figure className={styles["OrderItem-figure"]}>
+          <Image src={product?.images[0]} alt={product?.title} className={styles["OrderItem-figure-img"]} width={70} height={70}/>
         </figure>
         <p className={styles["OrderItem-p-2"]}>{product?.title}</p>
         <p className={styles["OrderItem-p-3"]}>{product?.price}</p>
