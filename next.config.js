@@ -36,6 +36,11 @@ const nextConfig = {
         hostname: "m.media-amazon.com",
       },
     ]
+  },
+  experimental: {
+    fontLoaders: [
+      { loader: '@next/font/google', options: { subsets: ['latin'] } },
+    ],
   }
 }
 

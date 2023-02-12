@@ -88,6 +88,7 @@ body {
 body {
   color: rgb(var(--foreground-rgb));
   background: #FFFFFF;
+  font-family: var(--font-quick), sans-serif;
 }
 
 a {
