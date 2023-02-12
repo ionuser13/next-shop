@@ -5,9 +5,13 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <title>React Shop</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet" />
+        <script dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-29BHL1S01N');`
+        }}/>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-29BHL1S01N"></script>
       </Head>
       <body>
         <Main />
