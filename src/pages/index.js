@@ -1,11 +1,11 @@
 import ProductList from '@containers/ProductList';
-import { Inter } from '@next/font/google';
-const inter = Inter({ subsets: ['latin'] })
+import { Quicksand } from '@next/font/google';
+const quick = Quicksand({ subsets: ['latin'] });
 
 export default function Home() {
   return (
-   <>
-    <ProductList />
-   </>
+    <div className={quick.className}>
+      <ProductList />
+    </div>
   );
 }

@@ -4,10 +4,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>
-          React Shop
-        </title>
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <title>React Shop</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet" />
       </Head>
@@ -16,5 +14,5 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }
