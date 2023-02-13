@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
+const withPWA = require("next-pwa")({
+  dest: "public",
+  include: ["production"],
+  register: true,
+});
+
 const nextConfig = {
   reactStrictMode: true,
   images: {
@@ -42,6 +48,6 @@ const nextConfig = {
       { loader: '@next/font/google', options: { subsets: ['latin'] } },
     ],
   }
-}
+} 
 
-module.exports = nextConfig
+module.exports = withPWA(nextConfig)
