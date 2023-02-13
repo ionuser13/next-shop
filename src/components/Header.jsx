@@ -73,12 +73,12 @@ const Header = () => {
       <div className={styles['navbar-right']}>
         <ul className={styles['navbar-right-ul']}>
           <li className={styles['navbar-email']}>
-            <Link onClick={handleToggle} onKeyDown={this.handleToggle}>
+            <Link href="" onClick={handleToggle} onKeyDown={this?.handleToggle}>
               platzi@example.com
             </Link>
           </li>
           <li className={styles['navbar-shopping-cart']}>
-            <Image src={shoppingCart} alt="shopping cart" onClick={handleToggleOrder} onKeyDown={this.handleToggleOrder} />
+            <Image src={shoppingCart} alt="shopping cart" onClick={handleToggleOrder} onKeyDown={this?.handleToggleOrder} />
             <div className={styles['navbar-shopping-cart-div']}>{state.cart.length}</div>
           </li>
         </ul>
