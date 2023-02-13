@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import MyOrderSidePanel from '@components/OrderItem';
+import Image from 'next/image';
 import Head from 'next/head';
 import AppContext from '@context/AppContext';
 import styles from '@styles/Checkout.module.scss';
@@ -24,6 +24,7 @@ const Checkout = () => {
           <h1 className={styles['title']}>My Order</h1>
           <div className={styles['checkout-content']}>
             <div className={styles['order']}>
+              <Image src={state.cart[0]?.images[0]} width={70} height={70} className={styles["checkout-order-image"]}/>
               <p className={styles['order-p-1']}>
                 <span className={styles['order-p-span-1']}>{date}</span>
                 <span className={styles['order-p-span-2']}>{state.cart.length} articles</span>
@@ -31,7 +32,6 @@ const Checkout = () => {
               <p className={styles['order-p-2']}>$ {sumTotal()}</p>
             </div>
           </div>
-          <MyOrderSidePanel product={state.cart} />
         </div>
       </div>
     </>
