@@ -17,16 +17,12 @@ const ProductItem = ({ product }) => {
           <p className={styles['product-info-div-p-1']}>$ {product.price}</p>
           <p className={styles['product-info-div-p-2']}>{product.title}</p>
         </div>
-        <figure onClick={() => handleClick(product)} className={styles['product-info-figure']}>
-          <Image src={addToCartIcon} alt="add to cart button" className={styles['product-info-figure-img']} />
+        <figure className={styles['product-info-figure']}>
+          <Image onClick={() => handleClick(product)} src={addToCartIcon} alt="add to cart button" className={styles['product-info-figure-img']} />
         </figure>
       </div>
     </div>
   );
 };
-
-{
-  /*Product Item*/
-}
 
 export default ProductItem;
