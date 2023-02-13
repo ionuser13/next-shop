@@ -24,7 +24,7 @@ const Checkout = () => {
           <h1 className={styles['title']}>My Order</h1>
           <div className={styles['checkout-content']}>
             <div className={styles['order']}>
-              <Image src={state.cart[0]?.images[0]} width={70} height={70} className={styles["checkout-order-image"]}/>
+              <Image src={state.cart[0]?.images[0]} width={70} height={70} className={styles['checkout-order-image']} alt="" />
               <p className={styles['order-p-1']}>
                 <span className={styles['order-p-span-1']}>{date}</span>
                 <span className={styles['order-p-span-2']}>{state.cart.length} articles</span>
