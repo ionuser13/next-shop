@@ -14,7 +14,7 @@ const NotFound = () => {
           <p>We searched everywhere but couldn&apos;t find what you are looking for.</p>
           <p>Let&apos;s find a better place for you to go.</p>
         </div>
-        <div className={'back'}>
+        <div className={styles['back']}>
           <button className={styles['primary-button']}>
             <Link href="/" className={styles['home-link']}>
               Home

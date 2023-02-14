@@ -18,7 +18,7 @@ const ProductItem = ({ product }) => {
           <p className={styles['product-info-div-p-2']}>{product.title}</p>
         </div>
         <figure className={styles['product-info-figure']}>
-          <Image onClick={() => handleClick(product)} src={`/Assets/${addToCartIcon}`} alt="add to cart button" className={styles['product-info-figure-img']} width={35} height={35} />
+          <Image onClick={() => handleClick(product)} src={addToCartIcon} alt="add to cart button" className={styles['product-info-figure-img']} width={35} height={35} />
         </figure>
       </div>
     </div>

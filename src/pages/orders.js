@@ -1,5 +1,5 @@
 import React from 'react';
-import OrderItem from '@components/OrderItem';
+import MyOrderSidePanel from '@components/OrderItem';
 import styles from '@styles/Orders.module.scss';
 
 const Orders = () => {
@@ -8,7 +8,7 @@ const Orders = () => {
       <div className={styles['Orders-container']}>
         <h1 className={styles['title']}>My Orders</h1>
         <div className={styles['Orders-content']}>
-          <OrderItem />
+          <MyOrderSidePanel />
         </div>
       </div>
     </div>

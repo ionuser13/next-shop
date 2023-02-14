@@ -33,7 +33,7 @@ const Login = () => {
           <button className={`${styles['primary-button']} ${styles['login-button']}`} onClick={handleSubmit}>
             Log In
           </button>
-          <Link href="/new-password" className={styles['form-a']}>
+          <Link href="/password-recovery" className={styles['form-a']}>
             Forgot my password
           </Link>
         </form>

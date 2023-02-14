@@ -57,6 +57,9 @@
   font-size: $--md;
   font-weight: bold;
   height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-button {

@@ -14,7 +14,6 @@
 
 .mobileMenu-ul-li-a {
   text-decoration: none;
-  color: $--black;
   font-weight: bold;
 }
 
@@ -30,6 +29,7 @@
 
 .mobileMenu-ul-li {
   margin-bottom: 24px;
+  color: $--very-light-pink
 }
 
 .email {

@@ -7,7 +7,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 80px;
+    gap: 60px;
+    color: $--black
 }
 .notfound-logo {
     height: 10%;
@@ -24,10 +25,24 @@
     text-align: center;
 }
 .back {
-    width: 200px;
-    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .home-link {
     text-decoration: none;
     color: $--white;
 }
+.primary-button {
+    background-color: $--hospital-green;
+    border-radius: 8px;
+    border: none;
+    color: $--white;
+    max-width: 150px;
+    width: 100%;
+    cursor: pointer;
+    font-size: $--md;
+    font-weight: bold;
+    height: 50px;
+  }
