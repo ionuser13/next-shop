@@ -5,6 +5,7 @@
   height: 100vh;
   display: grid;
   place-items: center;
+  color: $--black;
 }
 
 .CreateAccount-container {
@@ -23,6 +24,8 @@
 .title {
   font-size: $--lg;
   text-align: start;
+  color: $--very-light-pink;
+  margin-bottom: 22px;
 }
 
 .form {
@@ -39,6 +42,7 @@
   font-size: $--sm;
   font-weight: bold;
   margin-bottom: 4px;
+  color: $--black;
 }
 
 .input {
