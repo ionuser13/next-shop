@@ -1,4 +1,4 @@
-import Login from '@pages/Login';
+import Login from '@pages/login';
 import { Quicksand } from '@next/font/google';
 import Head from 'next/head';
 const quick = Quicksand({ subsets: ['latin'] });
