@@ -10,7 +10,8 @@
       "@context/*": ["context/*"],
       "@styles/*": ["styles/*"],
       "@hooks/*": ["hooks/*"],
-      "@templates/*": ["templates/*"]
+      "@templates/*": ["templates/*"],
+      "@fonts": ["fonts/*"]
     }
   }
 }

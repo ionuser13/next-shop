@@ -7,7 +7,7 @@ const Home = () => {
       <Header />
       <ProductList />;
     </>
-  )
+  );
 };
 
 export default Home;

@@ -9,7 +9,7 @@ const PasswordRecovery = () => {
     <div className={styles['PasswordRecovery']}>
       <div className={styles['PasswordRecover-container']}>
         <Link href="/main">
-        <Image src={logo} alt="logo" className={styles['logo']} />
+          <Image src={logo} alt="logo" className={styles['logo']} />
         </Link>
         <h1 className={styles['title']}>Password recovery</h1>
         <p className={styles['subtitle']}>Inform the email address used to create your account</p>

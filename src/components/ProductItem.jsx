@@ -9,7 +9,7 @@ const ProductItem = ({ product }) => {
   const handleClick = (item) => {
     addToCart(item);
   };
-  console.log(product.images)
+  console.log(product.images);
   return (
     <div className={styles['ProductItem']}>
       {product.images[0] && <Image src={product.images[0]} alt={product.title} className={styles['ProductItem-img']} width={240} height={240} />}

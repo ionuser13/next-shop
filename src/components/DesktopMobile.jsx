@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import MyAccountMobile from '@pages/my-account';
 import styles from '@styles/desktopMobile.module.scss';
 
 const DesktopMobile = () => {
@@ -51,7 +50,7 @@ const DesktopMobile = () => {
           </Link>
         </li>
         <li className={`${styles['mobileMenu-ul-li']}`}>
-          <Link href="my-account" className={`${styles['mobileMenu-ul-li-a']}`}>
+          <Link href="/my-account" className={`${styles['mobileMenu-ul-li-a']}`}>
             My account
           </Link>
         </li>

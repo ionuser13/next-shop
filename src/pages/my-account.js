@@ -27,7 +27,9 @@ const MyAccountMobile = () => {
           </div>
 
           <input type="submit" value="Edit" className={`${styles['secondary-button']} ${styles['login-button']}`} />
-          <Link href="/main" className={`${styles['secondary-button']} ${styles['login-button']}`}>Back</Link>
+          <Link href="/main" className={`${styles['secondary-button']} ${styles['login-button']}`}>
+            Back
+          </Link>
         </form>
       </div>
     </div>
