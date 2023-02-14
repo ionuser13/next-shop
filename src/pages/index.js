@@ -1,4 +1,4 @@
-import ProductList from '@containers/ProductList';
+import Login from '@pages/Login';
 import { Quicksand } from '@next/font/google';
 import Head from 'next/head';
 const quick = Quicksand({ subsets: ['latin'] });
@@ -9,7 +9,7 @@ export default function Home() {
       <Head>
         <title>React Shop</title>
       </Head>
-      <ProductList />
+      <Login />
     </div>
   );
 }

@@ -70,6 +70,12 @@
 	margin-top: 14px;
 	margin-bottom: 30px;
 }
+.signup-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 12px;
+}
 @media (max-width: 640px) {
 	.logo {
 		display: block;

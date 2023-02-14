@@ -14,6 +14,10 @@ const nextConfig = {
         hostname: 'placeimg.com',
       },
       {
+        protocol: 'http',
+        hostname: 'placeimg.com',
+      },
+      {
         protocol: "https",
         hostname: "api.lorem.space",
       },
@@ -41,6 +45,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "m.media-amazon.com",
       },
+      {
+        protocol: "https",
+        hostname: "i.imgur.com",
+      },
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+      }
     ]
   },
   experimental: {
