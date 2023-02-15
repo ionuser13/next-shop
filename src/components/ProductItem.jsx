@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import AppContext from '@context/AppContext';
 import addToCartIcon from '@icons/bt_add_to_cart.svg';
 import Image from 'next/image';
@@ -9,10 +9,13 @@ const ProductItem = ({ product }) => {
   const handleClick = (item) => {
     addToCart(item);
   };
+  const [ imgError, setImgError ] = useState(false);
+  const fallBackSrc = "https://static.vecteezy.com/system/resources/previews/005/337/799/non_2x/icon-image-not-found-free-vector.jpg";
+
   console.log(product.images);
   return (
     <div className={styles['ProductItem']}>
-      {product.images[0] && <img src={product.images[0]} alt={product.title} className={styles['ProductItem-img']} width={240} height={240} />}
+      {product.images[0] && <img src={imgError ? fallBackSrc : product.images[0]} alt={product.title} className={styles['ProductItem-img']} width={240} height={240} onError={() => {setImgError(true)}} />}
       <div className={styles['product-info']}>
         <div>
           <p className={styles['product-info-div-p-1']}>$ {product.price}</p>
