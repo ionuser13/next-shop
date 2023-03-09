@@ -26,8 +26,8 @@ const ProductItem = ({ product }) => {
             setImgError(true);
           }}
         />
-      )};
-
+      )}
+      ;
       <div className={styles['product-info']}>
         <div>
           <p className={styles['product-info-div-p-1']}>$ {product.price}</p>
