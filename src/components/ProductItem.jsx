@@ -16,7 +16,7 @@ const ProductItem = ({ product }) => {
   return (
     <div className={styles['ProductItem']}>
       {product.images[0] && (
-        <img
+        <Image
           src={imgError ? fallBackSrc : product.images[0]}
           alt={product.title}
           className={styles['ProductItem-img']}
@@ -27,6 +27,7 @@ const ProductItem = ({ product }) => {
           }}
         />
       )};
+
       <div className={styles['product-info']}>
         <div>
           <p className={styles['product-info-div-p-1']}>$ {product.price}</p>
