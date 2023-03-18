@@ -17,27 +17,27 @@ const Header = () => {
   const links = [
     {
       label: 'All',
-      route: '/main',
+      route: '/main/',
     },
     {
       label: 'Clothes',
-      route: '/clothes',
+      route: '/main/clothes',
     },
     {
       label: 'Electronics',
-      route: '/electronics',
+      route: '/main/electronics',
     },
     {
       label: 'Furnitures',
-      route: '/furnitures',
+      route: '/main/furnitures',
     },
     {
-      label: 'Toys',
-      route: '/toys',
+      label: 'Shoes',
+      route: '/main/shoes',
     },
     {
       label: 'Others',
-      route: '/others',
+      route: '/main/others',
     },
   ];
 

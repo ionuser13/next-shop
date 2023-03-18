@@ -3,16 +3,14 @@ import ProductItem from '@components/ProductItem';
 import useGetProducts from '@hooks/useGetProducts';
 import styles from '@styles/productList.module.scss';
 
-const API = `https://api.escuelajs.co/api/v1/products`;
-
-const ProductList = () => {
-  const [numProducts, setNumProducts] = useState(30);
+const ProductList = ({ APIParameter, numProd = 30 }) => {
+  const [numProducts, setNumProducts] = useState(numProd);
 
   function loadMore() {
     setNumProducts(numProducts + 30);
   }
 
-  const products = useGetProducts(`${API}?offset=0&limit=${numProducts}`);
+  const products = useGetProducts(`${APIParameter}?offset=0&limit=${numProducts}`);
   return (
     <section className="main-container">
       <div className={styles['ProductList']}>

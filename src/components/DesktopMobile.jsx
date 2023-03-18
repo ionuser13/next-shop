@@ -21,8 +21,8 @@ const DesktopMobile = () => {
       route: '/furnitures',
     },
     {
-      label: 'Toys',
-      route: '/toys',
+      label: 'Shoes',
+      route: '/shoes',
     },
     {
       label: 'Others',

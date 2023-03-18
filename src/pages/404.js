@@ -16,7 +16,7 @@ const NotFound = () => {
         </div>
         <div className={styles['back']}>
           <button className={styles['primary-button']}>
-            <Link href="/" className={styles['home-link']}>
+            <Link href="/main" className={styles['home-link']}>
               Home
             </Link>
           </button>

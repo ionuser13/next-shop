@@ -1,13 +1,14 @@
 import React from 'react';
 import Header from '@components/Header';
 import ProductList from '@containers/ProductList';
-const Home = () => {
+const Clothes = () => {
+  const API = 'https://api.escuelajs.co/api/v1/categories/2/products';
   return (
     <>
       <Header />
-      <ProductList />;
+      <ProductList APIParameter={API} />;
     </>
   );
 };
 
-export default Home;
+export default Clothes;
