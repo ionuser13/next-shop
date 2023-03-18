@@ -9,6 +9,8 @@ const ProductItem = ({ product }) => {
   const handleClick = (item) => {
     addToCart(item);
   };
+  const filteredImages = product.images.filter(img => img.startsWith('https://'));
+  const firsImg = filteredImages[0]
   const [imgError, setImgError] = useState(false);
   const fallBackSrc = 'https://static.vecteezy.com/system/resources/previews/005/337/799/non_2x/icon-image-not-found-free-vector.jpg';
 
@@ -17,14 +19,14 @@ const ProductItem = ({ product }) => {
     <div className={styles['ProductItem']}>
       {product.images[0] && (
         <Image
-          src={imgError ? fallBackSrc : product.images[0]}
-          alt={product.title}
-          className={styles['ProductItem-img']}
-          width={240}
-          height={240}
-          onError={() => {
-            setImgError(true);
-          }}
+        alt={product.title}
+        className={styles['ProductItem-img']}
+        width={240}
+        height={240}
+        onError={() => {
+          setImgError(true);
+        }}
+        src={imgError ? fallBackSrc : firsImg}
         />
       )}
       ;

@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className={quick.className}>
       <Head>
-        <title>React Shop</title>
+        <title>Yard Sale</title>
       </Head>
       <Login />
     </div>

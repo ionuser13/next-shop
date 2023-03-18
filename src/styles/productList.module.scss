@@ -10,6 +10,26 @@
     margin: 0 auto;
 
 }
+.primary-button {
+	background-color: $--hospital-green;
+	border-radius: 8px;
+	border: none;
+	color: $--white;
+	cursor: pointer;
+	font-size: $--md;
+	font-weight: bold;
+	height: 50px;
+}
+.load {
+	width: 80%;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    max-width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
 @media (max-width: 640px) {
     .ProductList {
         grid-template-columns: repeat(auto-fill, 120px);

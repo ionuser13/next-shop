@@ -64,6 +64,14 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "api.escuelajs.co",
+      },
+      {
+        protocol: "https",
+        hostname: "www.google.com",
+      },
+      {
+        protocol: "https",
+        hostname: "static.vecteezy.com",
       }
     ]
   },
