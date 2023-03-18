@@ -10,23 +10,23 @@ const DesktopMobile = () => {
     },
     {
       label: 'Clothes',
-      route: '/clothes',
+      route: '/main/clothes',
     },
     {
       label: 'Electronics',
-      route: '/electronics',
+      route: '/main/electronics',
     },
     {
       label: 'Furnitures',
-      route: '/furnitures',
+      route: '/main/furnitures',
     },
     {
       label: 'Shoes',
-      route: '/shoes',
+      route: '/main/shoes',
     },
     {
       label: 'Others',
-      route: '/others',
+      route: '/main/others',
     },
   ];
   return (
