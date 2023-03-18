@@ -14,7 +14,7 @@ const ProductItem = ({ product }) => {
   const [imgError, setImgError] = useState(false);
   const fallBackSrc = 'https://static.vecteezy.com/system/resources/previews/005/337/799/non_2x/icon-image-not-found-free-vector.jpg';
 
-  console.log(product.images);
+  // console.log(product.images);
   return (
     <div className={styles['ProductItem']}>
       {product.images[0] && (

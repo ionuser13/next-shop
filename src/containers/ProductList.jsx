@@ -6,10 +6,10 @@ import styles from '@styles/productList.module.scss';
 const API = `https://api.escuelajs.co/api/v1/products`;
 
 const ProductList = () => {
-  const [numProducts, setNumProducts] = useState(10);
+  const [numProducts, setNumProducts] = useState(30);
 
   function loadMore() {
-    setNumProducts(numProducts + 10);
+    setNumProducts(numProducts + 30);
   }
 
   const products = useGetProducts(`${API}?offset=0&limit=${numProducts}`);
