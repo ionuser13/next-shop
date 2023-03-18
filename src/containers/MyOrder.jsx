@@ -6,7 +6,7 @@ import AppContext from '@context/AppContext';
 import flecha from '@icons/flechita.svg';
 import styles from '@styles/MyOrder.module.scss';
 
-const MyOrder = ({ setToggleOrder }) => {
+const MyOrder = ({ toggleOrder, setToggleOrder }) => {
   const { state } = useContext(AppContext);
   const sumPrices = () => {
     const reducer = (accumulator, currentValue) => accumulator + currentValue.price;
@@ -21,7 +21,7 @@ const MyOrder = ({ setToggleOrder }) => {
   // }
 
   return (
-    <div className={styles.MyOrder}>
+    <div className={`${styles.MyOrder} ${toggleOrder ? styles['mobileMenuTRansitionedRight'] : styles['mobileMenuTransitionRight']}`}>
       <div className={styles['title-container']}>
         <Image src={flecha} alt="arrow" onClick={handleClose} className={`${styles['title-container-img']}`} />
         <p className="title">My order</p>

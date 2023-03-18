@@ -13,19 +13,21 @@ import styles from '@styles/header.module.scss';
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   const [toggleOrder, setToggleOrder] = useState(false);
+  const [mobtog, setMobtog] = useState(false);
   const { state } = useContext(AppContext);
   const handleToggleOrder = () => {
     setToggleOrder(!toggleOrder);
     setToggle(false);
+    setMobtog(false);
   };
   const handleToggle = () => {
     setToggle(!toggle);
     setToggleOrder(false);
   };
 
-  const [mobtog, setMobtog] = useState(false);
   const handleMobtog = () => {
     setMobtog(!mobtog);
+    setToggleOrder(false);
   };
   const links = [
     {
@@ -56,8 +58,15 @@ const Header = () => {
 
   return (
     <nav className={styles.nav}>
-      <Image src={menuIcon} alt="menu" className={styles.menu} onClick={handleMobtog} />
-      <div className={`${styles['general']} ${mobtog ? styles['mobileMenuTRansitioned'] : styles['mobileMenuTransition']}`}>
+      <Image
+        src={menuIcon}
+        alt="menu"
+        className={styles.menu}
+        onClick={() => {
+          handleMobtog();
+        }}
+      />
+      <div className={`${styles['general']} ${mobtog ? styles['mobileMenuTRansitionedLeft'] : styles['mobileMenuTransitionLeft']}`}>
         <DesktopMobile />
       </div>
       <div className={styles['navbar-left']}>
@@ -77,17 +86,32 @@ const Header = () => {
       <div className={styles['navbar-right']}>
         <ul className={styles['navbar-right-ul']}>
           <li className={styles['navbar-email']}>
-            <Link href="" onClick={handleToggle} onKeyDown={this?.handleToggle}>
+            <Link
+              href=""
+              onClick={() => {
+                handleToggle();
+              }}
+              onKeyDown={this?.handleToggle}
+            >
               platzi@example.com
             </Link>
           </li>
           <li className={styles['navbar-shopping-cart']}>
-            <Image src={shoppingCart} alt="shopping cart" onClick={handleToggleOrder} onKeyDown={this?.handleToggleOrder} />
+            <Image
+              src={shoppingCart}
+              alt="shopping cart"
+              onClick={() => {
+                handleToggleOrder();
+              }}
+              onKeyDown={this?.handleToggleOrder}
+            />
             <div className={styles['navbar-shopping-cart-div']}>{state.cart.length}</div>
           </li>
         </ul>
       </div>
-      {toggleOrder && <MyOrder setToggleOrder={setToggleOrder} />}
+      <div className={`${styles['general']}`}>
+        <MyOrder toggleOrder={toggleOrder} setToggleOrder={setToggleOrder} />
+      </div>
       {toggle && <Menu />}
     </nav>
   );

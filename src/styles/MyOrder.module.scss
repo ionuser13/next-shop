@@ -4,13 +4,12 @@
     height: 100vh;
     padding: 24px;
     position: fixed;
-    right: -360px;
+    right: 0;
     background-color: $--white;
     top: 61px;
     z-index: 1;
     border-left: 1px solid $--very-light-pink;
-    animation: swipeLeft .3s ease forwards;
-    transition: 0.3s ease;
+    transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .title-container {
     display: flex;
@@ -73,6 +72,12 @@
     .MyOrder {
         width: 100%;
     }
+}
+.mobileMenuTransitionRight {
+    right: -380px
+}
+.mobileMenuTRansitionedRight {
+    right: 0px;
 }
 @keyframes swipeLeft {
     100% {transform: translateX(-360px);}
