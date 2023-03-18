@@ -32,7 +32,7 @@ const DesktopMobile = () => {
   return (
     <div className={styles.mobileMenu}>
       <ul className={`${styles['mobileMenu-ul']} ${styles['mobileMenu-ul-1']}`}>
-      <li className={`${styles['mobileMenu-ul-li']}`}>
+        <li className={`${styles['mobileMenu-ul-li']}`}>
           <Link href="/" className={`${styles['mobileMenu-ul-li-a']}`}>
             CATEGORIES
           </Link>
