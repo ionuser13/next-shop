@@ -10,7 +10,7 @@ export default function Home() {
         <title>Yard Sale</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Ecommerce Platform made with Platzi API" />
-        <link rel="shortcut icon" href="/images/favicon.ico"/>
+        <link rel="shortcut icon" href="/images/favicon.ico" />
       </Head>
       <Login />
     </div>
