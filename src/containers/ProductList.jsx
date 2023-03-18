@@ -9,7 +9,7 @@ const ProductList = () => {
   const [numProducts, setNumProducts] = useState(10);
 
   function loadMore() {
-    setNumProducts(numProducts + 10)
+    setNumProducts(numProducts + 10);
   }
 
   const products = useGetProducts(`${API}?offset=0&limit=${numProducts}`);
@@ -17,7 +17,7 @@ const ProductList = () => {
     <section className="main-container">
       <div className={styles['ProductList']}>
         {products.map((product) => (
-            <ProductItem product={product} key={product.id} />
+          <ProductItem product={product} key={product.id} />
         ))}
       </div>
       <button className={`${styles['primary-button']} ${styles['load']}`} onClick={loadMore}>
