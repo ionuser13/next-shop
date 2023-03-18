@@ -14,31 +14,32 @@ const Header = () => {
   const [toggle, setToggle] = useState(false);
   const [toggleOrder, setToggleOrder] = useState(false);
   const { state } = useContext(AppContext);
-  const links = [{
-    label: "All",
-    route: "/main",
-  },
-  {
-    label: "Clothes",
-    route: "/clothes"
-  }, 
-  {
-    label: "Electronics",
-    route: "/electronics",
-  },
-  {
-    label: "Furnitures",
-    route: "/furnitures",
-  },
-  {
-    label: "Toys",
-    route: "/toys",
-  },
-  {
-    label: "Others",
-    route: "/others",
-  },
-]
+  const links = [
+    {
+      label: 'All',
+      route: '/main',
+    },
+    {
+      label: 'Clothes',
+      route: '/clothes',
+    },
+    {
+      label: 'Electronics',
+      route: '/electronics',
+    },
+    {
+      label: 'Furnitures',
+      route: '/furnitures',
+    },
+    {
+      label: 'Toys',
+      route: '/toys',
+    },
+    {
+      label: 'Others',
+      route: '/others',
+    },
+  ];
 
   const handleToggleOrder = () => {
     setToggleOrder(!toggleOrder);
@@ -63,7 +64,7 @@ const Header = () => {
           <Image src={logo} alt="logo" className={styles['nav-logo']} />
         </Link>
         <ul className={styles['navbar-left-ul']}>
-          {links.map(({label, route}) => (
+          {links.map(({ label, route }) => (
             <li key={route}>
               <Link href={route} className={styles['navbar-left-ul-li-a']}>
                 {label}
