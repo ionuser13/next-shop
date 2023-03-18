@@ -14,6 +14,19 @@ const Header = () => {
   const [toggle, setToggle] = useState(false);
   const [toggleOrder, setToggleOrder] = useState(false);
   const { state } = useContext(AppContext);
+  const handleToggleOrder = () => {
+    setToggleOrder(!toggleOrder);
+    setToggle(false);
+  };
+  const handleToggle = () => {
+    setToggle(!toggle);
+    setToggleOrder(false);
+  };
+
+  const [mobtog, setMobtog] = useState(false);
+  const handleMobtog = () => {
+    setMobtog(!mobtog);
+  };
   const links = [
     {
       label: 'All',
@@ -41,24 +54,12 @@ const Header = () => {
     },
   ];
 
-  const handleToggleOrder = () => {
-    setToggleOrder(!toggleOrder);
-    setToggle(false);
-  };
-  const handleToggle = () => {
-    setToggle(!toggle);
-    setToggleOrder(false);
-  };
-
-  const [mobtog, setMobtog] = useState(false);
-  const handleMobtog = () => {
-    setMobtog(!mobtog);
-  };
-
   return (
     <nav className={styles.nav}>
       <Image src={menuIcon} alt="menu" className={styles.menu} onClick={handleMobtog} />
-      {mobtog && <DesktopMobile />}
+      <div className={`${styles['general']} ${mobtog ? styles['mobileMenuTRansitioned'] : styles['mobileMenuTransition']}`}>
+        <DesktopMobile />
+      </div>
       <div className={styles['navbar-left']}>
         <Link href="/" style={{ display: 'flex' }}>
           <Image src={logo} alt="logo" className={styles['nav-logo']} />
