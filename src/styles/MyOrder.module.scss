@@ -68,17 +68,14 @@
     font-weight: bold;
     height: 50px;
 }
-@media (max-width: 640px) {
-    .MyOrder {
-        width: 100%;
-    }
-}
 .mobileMenuTransitionRight {
     right: -380px
 }
 .mobileMenuTRansitionedRight {
     right: 0px;
 }
-@keyframes swipeLeft {
-    100% {transform: translateX(-360px);}
+@media (max-width: 640px) {
+    .MyOrder {
+        width: 100%;
+    }
 }
