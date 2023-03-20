@@ -9,11 +9,11 @@ const ProductInfo = ({ toggleInfo, setToggleInfo, product }) => {
   const firsImg = filteredImages[0];
   const [imgError, setImgError] = useState(false);
   const fallBackSrc = 'https://static.vecteezy.com/system/resources/previews/005/337/799/non_2x/icon-image-not-found-free-vector.jpg';
-  const handleInfo = () => {setToggleInfo(false)}
+  const handleInfo = () => setToggleInfo(false);
   return (
     <aside className={`${styles['product-detail']} ${toggleInfo ? styles['mobileMenuTRansitionedRight'] : styles['mobileMenuTransitionRight']}`}>
       <div className={styles['product-detail-close']}>
-        <Image src={close} alt="close" onClick={handleInfo}/>
+        <Image src={close} alt="close" onClick={handleInfo} />
       </div>
       <Image
         src={imgError ? fallBackSrc : firsImg}
@@ -38,4 +38,3 @@ const ProductInfo = ({ toggleInfo, setToggleInfo, product }) => {
   );
 };
 export default ProductInfo;
-

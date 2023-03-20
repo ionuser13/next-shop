@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { ProductContext } from '@hooks/productContext';
+// import { ProductContext } from '@hooks/productContext';
 import AppContext from '@context/AppContext';
 import addToCartIcon from '@icons/bt_add_to_cart.svg';
 import Image from 'next/image';
@@ -14,7 +14,7 @@ const ProductItem = ({ product }) => {
   };
   const filteredImages = product.images.filter((img) => img.startsWith('https://'));
   const firsImg = filteredImages[0];
-  const handleInfo = () => setToggleInfo(true)
+  const handleInfo = () => setToggleInfo(true);
   const [imgError, setImgError] = useState(false);
   const fallBackSrc = 'https://static.vecteezy.com/system/resources/previews/005/337/799/non_2x/icon-image-not-found-free-vector.jpg';
 
