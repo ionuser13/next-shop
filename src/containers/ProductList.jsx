@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ProductItem from '@components/ProductItem';
 import useGetProducts from '@hooks/useGetProducts';
-import ProductInfo from '@components/ProductInfo';
 import styles from '@styles/productList.module.scss';
 
 const ProductList = ({ APIParameter, numProd = 30 }) => {

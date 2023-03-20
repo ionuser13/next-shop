@@ -39,7 +39,7 @@ const ProductItem = ({ product }) => {
           <Image onClick={() => handleClick(product)} src={addToCartIcon} alt="add to cart button" className={styles['product-info-figure-img']} width={35} height={35} />
         </figure>
       </div>
-      <ProductInfo product={product}/>
+      <ProductInfo product={product} />
     </div>
   );
 };
