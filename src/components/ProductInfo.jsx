@@ -1,11 +1,16 @@
 import React, { useContext, useState } from 'react';
+import AppContext from '@context/AppContext';
 import close from '@icons/icon_close.png';
-import addToCart from '@icons/bt_add_to_cart.svg';
+import addToCartIcon from '@icons/bt_add_to_cart.svg';
 import Image from 'next/image';
 import styles from '@styles/productInfo.module.scss';
 import { ProductContext } from '@hooks/productContext';
 
 const ProductInfo = ({ toggleInfo, setToggleInfo }) => {
+  const { addToCart } = useContext(AppContext);
+  const handleClick = (item) => {
+    addToCart(item);
+  };
   const { selectedProduct } = useContext(ProductContext);
   const filteredImages = selectedProduct.images.filter((img) => img.startsWith('https://'));
   const firsImg = filteredImages[0];
@@ -33,8 +38,13 @@ const ProductInfo = ({ toggleInfo, setToggleInfo }) => {
             <p className={styles['ProductInfo-p-1']}>$ {selectedProduct.price}</p>
             <p className={styles['ProductInfo-p-2']}>{selectedProduct.title}</p>
             <p className={styles['ProductInfo-p-3']}>{selectedProduct.description}</p>
-            <button className={`${styles['primary-button']} ${styles['add-to-cart-button']}`}>
-              <Image src={addToCart} alt="add to cart" />
+            <button
+              className={`${styles['primary-button']} ${styles['add-to-cart-button']}`}
+              onClick={() => {
+                handleClick(selectedProduct);
+              }}
+            >
+              <Image src={addToCartIcon} alt="add to cart" />
               Add to cart
             </button>
           </div>
@@ -58,7 +68,12 @@ const ProductInfo = ({ toggleInfo, setToggleInfo }) => {
             <p className={styles['ProductInfo-p-1']}>$ {'selectedProduct.price'}</p>
             <p className={styles['ProductInfo-p-2']}>{'selectedProduct.title'}</p>
             <p className={styles['ProductInfo-p-3']}>{'selectedProduct.description'}</p>
-            <button className={`${styles['primary-button']} ${styles['add-to-cart-button']}`}>
+            <button
+              className={`${styles['primary-button']} ${styles['add-to-cart-button']}`}
+              onClick={() => {
+                handleClick(selectedProduct);
+              }}
+            >
               <Image src={addToCart} alt="add to cart" />
               Add to cart
             </button>
