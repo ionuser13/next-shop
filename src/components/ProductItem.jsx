@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import AppContext from '@context/AppContext';
 import addToCartIcon from '@icons/bt_add_to_cart.svg';
 import Image from 'next/image';
+import ProductInfo from './ProductInfo';
 import styles from '@styles/ProductItem.module.scss';
 
 const ProductItem = ({ product }) => {
@@ -29,7 +30,6 @@ const ProductItem = ({ product }) => {
           src={imgError ? fallBackSrc : firsImg}
         />
       )}
-      ;
       <div className={styles['product-info']}>
         <div>
           <p className={styles['product-info-div-p-1']}>$ {product.price}</p>
@@ -39,6 +39,7 @@ const ProductItem = ({ product }) => {
           <Image onClick={() => handleClick(product)} src={addToCartIcon} alt="add to cart button" className={styles['product-info-figure-img']} width={35} height={35} />
         </figure>
       </div>
+      <ProductInfo product={product}/>
     </div>
   );
 };

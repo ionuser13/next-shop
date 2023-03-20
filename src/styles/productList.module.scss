@@ -8,7 +8,8 @@
     background-color: $--white;
     max-width: 1700px;
     margin: 0 auto;
-
+    position: relative;
+    z-index: 1;
 }
 .primary-button {
 	background-color: $--hospital-green;
@@ -32,6 +33,6 @@
 }
 @media (max-width: 640px) {
     .ProductList {
-        grid-template-columns: repeat(auto-fill, 120px);
+        grid-template-columns: repeat(auto-fill, 140px);
     }
 }
