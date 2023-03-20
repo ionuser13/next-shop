@@ -3,7 +3,6 @@ import { ProductContext } from '@hooks/productContext';
 import AppContext from '@context/AppContext';
 import addToCartIcon from '@icons/bt_add_to_cart.svg';
 import Image from 'next/image';
-import ProductInfo from './ProductInfo';
 import styles from '@styles/ProductItem.module.scss';
 
 const ProductItem = ({ product, setToggleInfo }) => {
@@ -16,7 +15,7 @@ const ProductItem = ({ product, setToggleInfo }) => {
   const firsImg = filteredImages[0];
   const handleInfo = () => {
     setToggleInfo(true);
-  }
+  };
   const [imgError, setImgError] = useState(false);
   const fallBackSrc = 'https://static.vecteezy.com/system/resources/previews/005/337/799/non_2x/icon-image-not-found-free-vector.jpg';
 
@@ -32,7 +31,10 @@ const ProductItem = ({ product, setToggleInfo }) => {
             setImgError(true);
           }}
           src={imgError ? fallBackSrc : firsImg}
-          onClick={()=>{handleInfo(); setSelectedProduct(product)}}
+          onClick={() => {
+            handleInfo();
+            setSelectedProduct(product);
+          }}
         />
       )}
       <div className={styles['product-info']}>
